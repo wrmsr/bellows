@@ -71,3 +71,8 @@ ENV/
 
 # Visual Studio Code
 .vscode
+
+bellows.app
+bellows.db
+
+.idea/

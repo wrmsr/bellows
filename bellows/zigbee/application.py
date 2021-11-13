@@ -198,6 +198,8 @@ class ControllerApplication(zigpy.application.ControllerApplication):
             self._reset_task.cancel()
         if self._ezsp is not None:
             self._ezsp.close()
+        if self._dblistener:
+            await self._dblistener.shutdown()
 
     async def form_network(self):
         nwk = self.config[zigpy.config.CONF_NWK]
